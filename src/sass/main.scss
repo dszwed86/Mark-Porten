@@ -1,0 +1,21 @@
+// Abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/utilities";
+// Base
+@import "base/base";
+@import "base/typography";
+
+// Components
+@import "components/footer";
+@import "components/navbar";
+@import "components/navbarside";
+
+// Layout
+
+// Pages
+@import "pages/section1";
+@import "pages/section2";
+@import "pages/section3";
+@import "pages/section4";
+@import "pages/section5";

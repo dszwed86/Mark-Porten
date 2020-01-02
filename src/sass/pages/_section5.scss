@@ -1,0 +1,58 @@
+.section5{
+    background-color: $color-blue;
+    background-image: url(/src/img/CONTACT.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+    transform: translateY(-103rem);
+    margin-bottom: -103rem;
+    padding-bottom: 18rem;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 5rem;
+        width: .1rem;
+        height: 100%;
+        background-color: $color-cyan;
+    }
+
+    &::after {
+        content: '05_';
+        color: $color-cyan;
+        @include pageNumbers;
+    }
+
+    .content{
+        padding-top: 60rem;
+        padding-left: 8rem;
+        width: 100%;
+
+        &__contact{
+            text-align: right;
+            margin-right: 15rem;
+
+            .cicon{
+                margin-right: 2rem;
+                width: 4rem;
+                height: 4rem;
+            }
+
+            &--name{
+                font-size: 7rem;
+                color: $color-cyan;
+                margin-bottom: 4rem;
+            }
+
+            &--info{
+                padding-left: 1rem;
+                margin-bottom: 1.5rem;
+                font-size: 3rem;
+                color: $color-white;
+            }
+        }
+    }
+}

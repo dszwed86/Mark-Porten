@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+    @include media(tablet-b){
+        font-size: 55.5%;
+    }
+
+    @include media(tablet-s){
+        font-size: 45.5%;
+    }
+
+    @include media(phone){
+        font-size: 40%;
+    }
+
+    @include media(desktop-b){
+        font-size: 65.5%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+.row{
+    max-width: 170rem;
+    margin: 0 auto;
+    transition: all .8s ease-in-out;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+::selection {
+    color: rgb(240, 144, 0);
+}

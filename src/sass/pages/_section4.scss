@@ -1,0 +1,101 @@
+.section4{
+    background-color: $color-cyan;
+    background-image: url(/src/img/wat.jpg);
+    background-blend-mode: multiply;
+    background-position: top;
+    background-position-y: -77rem;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-52rem);
+    @include media(phone){
+        background-image: url();
+    }
+    
+    @supports (clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%)){
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%);
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 5rem;
+        width: .1rem;
+        height: 100%;
+        background-color: $color-blue;
+    }
+
+    &::after {
+        content: '04_';
+        color: $color-blue;
+        @include pageNumbers;
+    }
+
+    .content{
+        padding-top: 33rem;
+        width: 100%;
+        height: 100%;
+        padding-bottom: 25rem;
+        
+        h3{
+            padding-left: 8rem;
+        }
+        &__gallery{
+            margin: 0 auto;
+            width: 92%;
+            display: flex;
+            flex-wrap: wrap;
+            
+            @include media(tablet-b){
+                padding-left: 3rem;
+            }
+            
+            @include media(phone){
+                padding-left: 5rem;
+                padding-bottom: 30rem;
+            }
+            
+            &--item1{
+                @include galleryItem;
+                background-image: url(/src/img/10.jpg);
+            }
+            &--item2{
+                @include galleryItem;
+                background-image: url(/src/img/11.jpg);
+            }
+            &--item3{
+                @include galleryItem;
+                background-image: url(/src/img/12.jpg);
+            }
+            &--item4{
+                @include galleryItem;
+                background-image: url(/src/img/13.jpg);
+            }
+            &--item5{
+                @include galleryItem;
+                background-image: url(/src/img/14.jpg);
+            }
+            &--item6{
+                @include galleryItem;
+                background-image: url(/src/img/15.jpg);
+            }
+            &--item7{
+                @include galleryItem;
+                background-image: url(/src/img/16.jpg);
+            }
+            &--item8{
+                @include galleryItem;
+                background-image: url(/src/img/17.jpg);
+            }
+            &--item9{
+                @include galleryItem;
+                background-image: url(/src/img/18.jpg);
+            }
+            &--item10{
+                @include galleryItem;
+                background-image: url(/src/img/19.jpg);
+            }
+        }
+    }
+}

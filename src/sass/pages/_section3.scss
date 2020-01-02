@@ -1,0 +1,85 @@
+.section3{
+    background-color: #2b3e6a;
+    background-image: url(/src/img/wat.jpg);
+    background-blend-mode: multiply;
+    background-position: top;
+    padding-bottom: 18rem;
+    position: relative;
+    z-index: 3;
+    transform: translateY(-22rem);
+    
+    @supports (clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%)){
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%);
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 5rem;
+        width: .1rem;
+        height: 100%;
+        background-color: $color-cyan;
+    }
+
+    &::after {
+        content: '03_';
+        color: $color-cyan;
+        @include pageNumbers;
+    }
+
+    .content{
+        padding-top: 20rem;
+        width: 100%;
+        padding-left: 8rem;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 15rem;
+
+        &__left{
+            flex: 1 1 70%;
+            height: 100%;
+            
+            &__gallery{
+                justify-content: space-around;
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                
+                &--item1{
+                    background-image: url(/src/img/01.jpg);
+                    @include storyPic;
+                }
+                &--item2{
+                    background-image: url(/src/img/02.jpg);
+                    @include storyPic;
+                }
+                &--item3{
+                    background-image: url(/src/img/03.jpg);
+                    @include storyPic;
+                }
+            }
+
+        }
+
+        &__right{
+            flex: 1 0 20%;
+            margin-right: 5rem;
+            border: .2rem solid $color-cyan;
+            padding: 3rem;
+            line-height: 2.2rem;
+
+            &--title{
+                font-weight: 700;
+                line-height: 3rem;
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+            @include media(phone){
+
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.section2{
+    background-image: url(/src/img/MARK.jpg);
+    background-color: $color-cyan;
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    padding-top: 10rem;
+    padding-bottom: 15rem;
+    background-size: contain;
+    position: relative;
+    z-index: 4;
+    transform: translateY(-10rem);
+    @include media(tablet-b){
+        background-position-x: -15rem;
+        background-position-y: 0rem;
+        background-size: cover;
+    }
+    @include media(phone){
+        background-image: none;
+    }
+    
+    @supports (clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%)) or (-webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%)){
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%);
+        -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 60% 90%, 55% 100%, 0% 100%);
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 5rem;
+        width: .1rem;
+        height: 100%;
+        background-color: $color-blue;
+    }
+
+    &::after {
+        content: '02_';
+        color: $color-blue;
+        @include pageNumbers;
+    }
+
+    .content{
+        padding-top: 15rem;
+        width: 50%;
+        margin-left: auto;
+        padding-bottom: 13rem;
+        padding-right: 5rem;
+        @include media(phone){
+            width: 100%;
+            padding: 7rem;
+        }
+    }
+}

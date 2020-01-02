@@ -1,0 +1,11 @@
+.footer{
+    position: static;
+    bottom: 0;
+    background-color: black;
+    text-align: right;
+
+    &--text{
+        color: $color-white;
+        padding: 2rem;
+    }
+}

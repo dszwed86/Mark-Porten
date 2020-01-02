@@ -1,0 +1,33 @@
+.nav {
+    position: relative;
+    z-index: 6;
+    width: 100vw;
+    border-bottom: .1rem solid $color-cyan;
+
+    .navbar {
+        padding: 2rem;
+        margin-left: 7rem;
+        transition: all .4s ease-in-out;
+
+        &__item {
+            display: inline-block;
+            transition: all .4s ease-in-out;
+
+            &:not(:last-of-type) {
+                margin-right: 3rem;
+            }
+            
+            &:hover{
+                transform: scale(1.1);
+            }
+            &--link {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-gray;
+                font-size: 2rem;
+                font-weight: 400;
+
+            }
+        }
+    }
+}
