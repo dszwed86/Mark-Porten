@@ -1,6 +1,6 @@
 .section3{
     background-color: #2b3e6a;
-    background-image: url(/src/img/wat.jpg);
+    background-image: url(/img/wat.jpg);
     background-blend-mode: multiply;
     background-position: top;
     padding-bottom: 18rem;
@@ -49,15 +49,15 @@
                 justify-content: flex-start;
                 
                 &--item1{
-                    background-image: url(/src/img/01.jpg);
+                    background-image: url(/img/01.jpg);
                     @include storyPic;
                 }
                 &--item2{
-                    background-image: url(/src/img/02.jpg);
+                    background-image: url(/img/02.jpg);
                     @include storyPic;
                 }
                 &--item3{
-                    background-image: url(/src/img/03.jpg);
+                    background-image: url(/img/03.jpg);
                     @include storyPic;
                 }
             }
